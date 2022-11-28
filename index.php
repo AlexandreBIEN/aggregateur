@@ -26,5 +26,5 @@ if(isset($_GET['route']) && $_GET['route'] != ''){
 }
 // Sinon on redirige vers la page de connexion
 else{
-    header('Location: ./view/connexion.php');
+    // header('Location: ./view/connexion.php');
 }

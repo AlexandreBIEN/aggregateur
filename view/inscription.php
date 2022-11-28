@@ -1,11 +1,32 @@
-<form action="../controllers/add-user-controller.php" method="GET">
-    <label for="login">Identifiant :</label>
-    <input type="text" id="login" name="login">
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" name="password">
-    <label for="email">E-mail :</label>
-    <input type="email" id="email" name="email">
-    <label for="interests">Intérêt(s) :</label>
-    <input type="text" id="interests" name="interests">
-    <button type="submit">Envoyer</button>
-</form>
+<?php 
+
+require_once '../inc/header.php' 
+?>
+
+<main class="container container-width">
+    <!-- Création compte utilisateur -->
+
+    <p class="section-title text-center">Création d'un compte :</p>
+
+    <form method="GET" action="../controllers/add-user-controller.php">
+        <div class="form-group">
+            <label for="login">Identidiant :</label>
+            <input required type="text" class="form-control" id="login" name="login" placeholder="ex : Alexandre">
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe :</label>
+            <input required type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input required type="email" class="form-control" id="email" name="email" placeholder="ex : alexbien76fr@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="interests">Intérêt(s) :</label>
+            <input required type="text" class="form-control" id="interests" name="interests" placeholder="ex : Rugby,Basket">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-secondary">Créer le compte</button>
+        </div>
+    </form>
+</main>

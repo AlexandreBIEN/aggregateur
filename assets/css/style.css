@@ -1,0 +1,33 @@
+.logo{
+    height: 100px;
+    width: 200px;
+}
+
+.card {
+    max-width: 644px;
+}
+
+.img-post {
+    max-width: 644px;
+    max-height: 322px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+    .img-post {
+        width: 322px;
+        height: 161px;
+    }
+
+  }
+
+  .container-width{
+    width: 25%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px) {
+    .container-width {
+      width: 75%;
+    }
+  }
