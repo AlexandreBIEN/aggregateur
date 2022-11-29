@@ -1,10 +1,15 @@
 <?php
 require_once __DIR__ . '/db.php';
 
-/***************************************************************************
-Enregistrement d'un utilisateur : requête paramétrée
-utilisation de la méthode prépare avec des paramètres nommés.
-************************************************************************** */
+/**
+ * Enregistrement d'un utilisateur dans la base de donnée
+ *
+ * @param string $user_login
+ * @param string $user_password
+ * @param string $user_email
+ * @param string $user_interests
+ * @return bool
+ */
 function register_user($user_login, $user_password, $user_email, $user_interests){
     $db = db_connect();
 

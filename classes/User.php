@@ -18,13 +18,28 @@ class User {
      */
     protected $interests;
 
+    /**
+     * Email de l'utilisateur
+     *
+     * @var string
+     */
+    protected $email;
+
 
     // CONSTRUCTEUR
 
-    public function __construct(string $login, string $interests)
+    /**
+     * Contructeur de l'utilisateur
+     *
+     * @param string $login
+     * @param string $interests
+     * @param string $email
+     */
+    public function __construct(string $login, string $interests, string $email)
     {
         $this->login = $login;
         $this->interests = $interests;
+        $this->email = $email;
     }
 
 
@@ -56,6 +71,18 @@ class User {
         return $this;
     }
 
+    /**
+     * Défini l'email de l'utilisateur
+     *
+     * @param string $interests
+     * @return self
+     */
+    public function setEmail(string $email):self
+    {
+        $this->email = $email;
+        return $this;
+    }
+
 
     // GETTER
 
@@ -77,5 +104,32 @@ class User {
     public function getInterests():string
     {
         return $this->interests;
+    }
+
+    /**
+     * Récupère l'email de l'utilisateur
+     *
+     * @return string
+     */
+    public function getEmail():string
+    {
+        return $this->email;
+    }
+
+    /**
+     * Vérification si l'utilisateur est connecté
+     *
+     * @return boolean
+     */
+    public function isUserConnected():bool
+    {
+        if($this->getLogin() == null){
+            $connected = false;
+        }
+        else {
+            $connected = true;
+        }
+        return $connected;
+
     }
 }
