@@ -3,13 +3,6 @@ $title = 'Accueil';
 require_once './inc/header.php';
 $url = 'https://www.lemonde.fr/sport/rss_full.xml'; 
 $xml = simpleXML_load_file($url,"SimpleXMLElement",LIBXML_NOCDATA);
-
-// for ($i=0; $i < 10; $i++) { 
-//     echo $xml->channel->item[$i]->media->url . '<br>';
-//     echo $xml->channel->item[$i]->title . '<br>';
-// }
-// echo $xml->channel->item[0]->title;
-
 ?>
 
 <div class="container d-flex">

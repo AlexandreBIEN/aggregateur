@@ -20,11 +20,11 @@ if(isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != ''){
             break;
         
         default:
-        require __DIR__ . 'view/connexion.php';
+        require __DIR__ . '/view/connexion.php';
             break;
     }
 }
 // Sinon on redirige vers la page de connexion
 else{
-    require __DIR__ . 'view/connexion.php';
+    require __DIR__ . '/view/connexion.php';
 }
