@@ -1,6 +1,6 @@
 <?php 
-
-require_once '../inc/header.php' 
+$title = 'Inscription';
+require_once './inc/header.php';
 ?>
 
 <main class="container container-width">
@@ -8,7 +8,7 @@ require_once '../inc/header.php'
 
     <p class="section-title text-center">Création d'un compte :</p>
 
-    <form method="GET" action="../controllers/add-user-controller.php">
+    <form method="GET" action="./controllers/add-user-controller.php">
         <div class="form-group">
             <label for="login">Identidiant :</label>
             <input required type="text" class="form-control" id="login" name="login" placeholder="ex : Alexandre">

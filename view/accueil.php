@@ -1,6 +1,6 @@
 <?php 
-
-require_once '../inc/header.php' 
+$title = 'Accueil';
+require_once './inc/header.php';
 ?>
 
 <div class="container d-flex">

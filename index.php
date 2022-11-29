@@ -2,29 +2,29 @@
 
 // Router
 
-if(isset($_GET['route']) && $_GET['route'] != ''){
+if(isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != ''){
 
-    // Redirige vers la page inscript dans $_GET['route']
-    switch ($_GET['route']) {
-        case 'accueil':
-            header('Location: ./view/accueil.php');
+    // Redirige vers la page inscript dans $_SERVER['REQUEST_URI']
+    switch ($_SERVER['REQUEST_URI']) {
+        case '/accueil':
+            require __DIR__ . '/view/accueil.php';
             break;
-        case 'connexion':
-            header('Location: ./view/connexion.php');
+        case '/connexion':
+            require __DIR__ . '/view/connexion.php';
             break;
-        case 'inscription':
-            header('Location: ./view/inscription.php');
+        case '/inscription':
+            require __DIR__ . '/view/inscription.php';
             break;
-        case 'modification':
-            header('Location: ./view/modification.php');
+        case '/modification':
+            require __DIR__ . '/view/modification.php';
             break;
         
         default:
-            header('Location: ./view/connexion.php');
+        require __DIR__ . 'view/connexion.php';
             break;
     }
 }
 // Sinon on redirige vers la page de connexion
 else{
-    // header('Location: ./view/connexion.php');
+    require __DIR__ . 'view/connexion.php';
 }
