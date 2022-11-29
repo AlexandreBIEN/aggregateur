@@ -25,3 +25,4 @@ function register_user($user_login, $user_password, $user_email, $user_interests
 
     return true;
 }
+

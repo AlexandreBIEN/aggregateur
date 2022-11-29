@@ -13,8 +13,15 @@
 <body class="bg-light">
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
-        <div class="container justify-content-center">
+        <div class="container justify-content-start">
             <a href="/accueil"><img class="navbar-brand text-white mx-0 logo" src="./assets/img/lemondelogo.svg" alt="logo le Monde"></a>
+        </div>
+        <div class="container d-flex justify-content-end">
+            <ul>
+                <li><a href="/accueil">Accueil</a></li>
+                <li><a href="/modification">Profil</a></li>
+                <li><a href="/connexion">Se déconnecter</a></li>
+            </ul>
         </div>
     </nav>
 </header>
