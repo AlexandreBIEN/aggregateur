@@ -14,7 +14,9 @@ if($_GET != null) {
         $userInfos = $userModel->get_user_infos($_GET['login'], $_GET['password']);
 
         // On stock les infos de l'utilisateur connecté dans une variable session
-        $_SESSION['connectedUser'] = new User($userInfos[0]['login'], $userInfos[0]['interests'], $userInfos[0]['email']);
+        $user = new User($userInfos[0]['login'], $userInfos[0]['interests'], $userInfos[0]['email']);
+
+        $_SESSION['login'] = $user->getLogin();
 
         header('Location: /accueil');
     }

@@ -6,7 +6,7 @@ require_once './inc/header.php';
 <main class="container container-width">
     <!-- Création compte utilisateur -->
 
-    <p class="section-title text-center">Création d'un compte :</p>
+    <h2 class="text-center">Création d'un compte :</h2>
 
     <!-- Formulaire d'inscription -->
     <form method="GET" action="./controllers/add-user-controller.php">

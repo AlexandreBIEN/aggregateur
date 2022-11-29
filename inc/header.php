@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="/accueil">Accueil</a></li>
                 <li><a href="/modification">Profil</a></li>
-                <li><a href="/connexion">Se déconnecter</a></li>
+                <li><a href="./controllers/connect-user-controller.php">Se déconnecter</a></li>
             </ul>
         </div>
     </nav>
