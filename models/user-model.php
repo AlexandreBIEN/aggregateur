@@ -72,4 +72,40 @@ class UserModel {
             return false;
         }
     }
+
+
+    /**
+     * Fonction qui récupère les informations de l'utilisateur ayant le même identifiant et mot de passe que renseigné en paramètre
+     *
+     * @param string $user_login
+     * @param string $user_password
+     * @return void
+     */
+    public function get_user_infos(string $user_login, string $user_password)
+    {
+        $db = db_connect();
+
+        $sql = <<<EOD
+        SELECT 
+            `user_id`,
+            `login`, 
+            `password`,
+            `email`,
+            `interests`
+        FROM 
+            `users`
+        WHERE
+            `login` = :user_login 
+        AND
+            `password` = :user_password
+        EOD;
+
+        $userStmt = $db->prepare($sql);
+        $userStmt->bindvalue(':user_login', $user_login);
+        $userStmt->bindvalue(':user_password', $user_password);
+
+        $userStmt->execute();
+        $user = $userStmt->fetchAll(PDO::FETCH_ASSOC);
+        return $user;
+    }
 }
