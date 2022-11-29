@@ -7,6 +7,7 @@ require_once './inc/header.php';
     <div class="text-center">
         <h2>Bienvenue !</h2>
     </div>
+    <!-- Formulaire de connexion -->
     <form method="GET" action="./controllers/connect-user-controller.php">
         <div class="form-group mt-3">
             <label for="login">Identidiant :</label>

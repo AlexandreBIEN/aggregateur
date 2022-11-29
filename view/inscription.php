@@ -8,6 +8,7 @@ require_once './inc/header.php';
 
     <p class="section-title text-center">Création d'un compte :</p>
 
+    <!-- Formulaire d'inscription -->
     <form method="GET" action="./controllers/add-user-controller.php">
         <div class="form-group">
             <label for="login">Identidiant :</label>
