@@ -2,7 +2,7 @@
 $title = 'Accueil';
 require_once './inc/header.php';
 $url = 'https://www.lemonde.fr/sport/rss_full.xml'; 
-$xml = simpleXML_load_file($url,"SimpleXMLElement",LIBXML_NOCDATA);
+$xml = simpleXML_load_file($url,"SimpleXMLElement");
 session_start();
 ?>
 
