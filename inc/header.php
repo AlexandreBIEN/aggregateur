@@ -14,7 +14,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
         <div class="container justify-content-start">
-            <a href="/accueil"><img class="navbar-brand text-white mx-0 logo" src="./assets/img/lemondelogo.svg" alt="logo le Monde"></a>
+            <a href="/accueil"><img class="navbar-brand text-white mx-0 logo" src="../assets/img/lemondelogo.svg" alt="logo le Monde"></a>
         </div>
         <div class="container d-flex justify-content-end">
             <ul>

@@ -31,3 +31,12 @@
       width: 75%;
     }
   }
+
+a {
+    color: rgb(108, 108, 108);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(160, 160, 160);
+    text-decoration: none;
+}
