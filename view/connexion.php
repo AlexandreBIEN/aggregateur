@@ -6,7 +6,7 @@ session_start();
 
 <main class="container container-width">
     <div class="text-center">
-        <?php if(isset($_SESSION['confirmedUser']) && $_SESSION['confirmedUser'] == true) : ?>
+        <?php if(isset($_SESSION['confirmedUser']) && ($_SESSION['confirmedUser'] == true)) : ?>
             <span class="text-success">Votre inscription a été validé ! veuillez désormais vous connecter à votre compte.</span>
         <?php endif; ?>
         <h2>Bienvenue !</h2>
@@ -31,3 +31,4 @@ session_start();
         </div>
     </form>
 </main>
+<?php $_SESSION['confirmedUser'] = false; ?>
