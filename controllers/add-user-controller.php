@@ -3,13 +3,14 @@ require_once __DIR__ . '/../models/user-model.php';
 session_start();
 
 // Si la variable $_GET['confirm'] = true alors on enregistre l'utilisateur dans la base de donnée
-if(isset($_GET['confirm']) && $_GET['confirm'] == $_SESSION['keyVerify']){
+if(isset($_GET['confirm']) && ($_GET['confirm'] == $_SESSION['keyVerify'])){
     $userModel = new UserModel();
 
-    $_SESSION['confirmedUser'] = true;
     // On enregistre l'utilisateur créé dans la base de donnée
     $userModel->register_user($_SESSION['pending_login'], $_SESSION['pending_password'], $_SESSION['pending_email'], $_SESSION['pending_interests']);
-
+    
+    $_SESSION['confirmedUser'] = true;
+    
     // On renvoi vers la page de connexion
     header('Location: /connexion');
 }

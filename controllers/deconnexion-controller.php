@@ -3,6 +3,7 @@
 session_start();
 
 $_SESSION['login'] = NULL;
+$_SESSION['confirmedUser'] = false;
 // On détruit la session
 session_destroy();
 
