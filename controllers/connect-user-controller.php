@@ -13,7 +13,7 @@ if($_GET != null) {
     if($isUserConnected == true){
         $_SESSION['errorConnection'] = false;
         // On récupère les infos de l'utilisateur connecté
-        $userInfos = $userModel->get_user_infos($_GET['login'], $_GET['password']);
+        $userInfos = $userModel->verify_user_infos($_GET['login'], $_GET['password']);
 
         // On stock les infos de l'utilisateur connecté dans une variable session
         $user = new User($userInfos[0]['login'], $userInfos[0]['interests'], $userInfos[0]['email']);
@@ -24,6 +24,7 @@ if($_GET != null) {
     }
     // Sinon on renvoi sur la page de connexion
     else{
+        $_SESSION['userLoginTamp'] = $_GET['login'];
         $_SESSION['errorConnection'] = true;
         header('Location: /connexion');
     }

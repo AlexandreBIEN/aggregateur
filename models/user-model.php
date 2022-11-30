@@ -81,7 +81,7 @@ class UserModel {
      * @param string $user_password
      * @return void
      */
-    public function get_user_infos(string $user_login, string $user_password)
+    public function verify_user_infos(string $user_login, string $user_password)
     {
         $db = db_connect();
 
