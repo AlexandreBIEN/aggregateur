@@ -12,7 +12,7 @@ session_start();
     <?php for ($i=0; $i < 10; $i++): ?>
         <div class="col">
             <div class="card mb-4 p-4">
-                <img src="https://img.lemde.fr/2022/11/20/456/0/5473/2736/644/322/60/0/42ad128_5785158-01-06.jpg" alt="image du poste" class="img-post">
+                <img src="<?= $xml->channel->item[$i]->children('media', true)->content->attributes()->url?>" alt="image du poste" class="img-post">
                 <!-- Titre du poste -->
                 <p class="post-title font-weight-bold"><?= $xml->channel->item[$i]->title; ?></p>
                 <!-- Description du poste -->
