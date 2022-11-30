@@ -20,6 +20,9 @@ session_start();
         <div class="form-group">
             <label for="password">Mot de passe :</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
+            <?php if(isset($_SESSION['errorConnection']) && $_SESSION['errorConnection'] == true) : ?>
+                <span class="text-danger">Votre identifiant ou votre mot de passe est erroné, veuillez réessayer.</span>
+            <?php endif; ?>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-secondary">Connexion</button><br>

@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../classes/User.php';
 require_once __DIR__ . '/../models/user-model.php';
+session_start();
+
 
 if($_GET != null) {
     $userModel = new UserModel();
@@ -9,7 +11,7 @@ if($_GET != null) {
 
     // On test si l'utilisateur est connecté
     if($isUserConnected == true){
-        session_start();
+        $_SESSION['errorConnection'] = false;
         // On récupère les infos de l'utilisateur connecté
         $userInfos = $userModel->get_user_infos($_GET['login'], $_GET['password']);
 
@@ -22,9 +24,11 @@ if($_GET != null) {
     }
     // Sinon on renvoi sur la page de connexion
     else{
+        $_SESSION['errorConnection'] = true;
         header('Location: /connexion');
     }
 }
 else {
+    $_SESSION['errorConnection'] = false;
     header('Location: /connexion');
 }

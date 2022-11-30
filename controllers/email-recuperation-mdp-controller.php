@@ -6,7 +6,7 @@
     // Sujet du mail
     $subject = "Mot de passe oublié, journal Le Monde";
     // Contenu du mail
-    $message = "Si vous êtes à l'origine de cette inscription, veuillez cliquer sur le lien suivant pour continuer : http://aggregateur.test/controllers/add-user-controller.php?confirm=true";
+    $message = "Si vous êtes à l'origine de cette demande de changement de mot de passe, veuillez cliquer sur le lien suivant pour continuer. Sinon ignorez ce mail : http://aggregateur.test/controllers/add-user-controller.php?confirm=true";
     // Informations de l'expéditeur
     $headers = "De :" . $from;
     // Création et envoi du mail
