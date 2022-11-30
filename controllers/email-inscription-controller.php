@@ -11,4 +11,4 @@
     $headers = "De :" . $from;
     // Création et envoi du mail
     mail($to, $subject, $message, $headers);
-    header('Location: /verification/inscription');
+    header('Location: /verification-inscription');

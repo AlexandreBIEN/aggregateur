@@ -15,8 +15,11 @@ if(isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != ''){
         case '/inscription':
             require_once __DIR__ . '/view/inscription.php';
             break;
-        case '/verification/inscription':
+        case '/verification-inscription':
             require_once __DIR__ . '/view/email-inscription.php';
+            break;
+        case '/verification-modification':
+            require_once __DIR__ . '/view/email-modification.php';
             break;
         case '/modification':
             require_once __DIR__ . '/view/modification.php';

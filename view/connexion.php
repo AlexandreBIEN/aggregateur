@@ -7,7 +7,7 @@ session_start();
 <main class="container container-width">
     <div class="text-center">
         <?php if(isset($_SESSION['confirmedUser'])) : ?>
-        <span class="bg-sucess text-success">Votre inscription a été validé ! veuillez désormais vous connecter à votre compte.</span>
+        <span class="text-success">Votre inscription a été validé ! veuillez désormais vous connecter à votre compte.</span>
         <?php endif; ?>
         <h2>Bienvenue !</h2>
     </div>
