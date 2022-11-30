@@ -1,5 +1,5 @@
 <?php 
-$title = 'vérification';
+$title = 'Vérification';
 require_once './inc/header.php';
 ?>
 

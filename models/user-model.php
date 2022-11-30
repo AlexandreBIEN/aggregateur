@@ -108,4 +108,32 @@ class UserModel {
         $user = $userStmt->fetchAll(PDO::FETCH_ASSOC);
         return $user;
     }
+
+    /**
+     * Fonction qui change le mot de passe de l'utilisateur par le nouveau
+     *
+     * @param string $user_new_password
+     * @param string $user_login
+     * @return boolean
+     */
+    public function change_user_password(string $user_new_password, string $user_login):bool
+    {
+        $db = db_connect();
+
+        $sql = <<<EOD
+        UPDATE 
+            `users` 
+        SET 
+            `password` = :user_new_password 
+        WHERE 
+            `users`.`login` = :user_login;
+        EOD;
+
+        $changePwd = $db->prepare($sql);
+        $changePwd->bindValue(':user_new_password', $user_new_password);
+        $changePwd->bindValue(':user_login', $user_login);
+
+        $changePwd->execute();
+        return true;
+    }
 }
