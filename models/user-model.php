@@ -166,4 +166,22 @@ class UserModel {
         $changePwd->execute();
         return true;
     }
+
+    /**
+     * Vérification si l'utilisateur est connecté
+     *
+     * @return boolean
+     */
+    public function isUserConnected():bool
+    {
+        session_start();
+        if(isset($_SESSION['userConnected']) && $_SESSION['userConnected'] == true){
+            $connected = true;
+        }
+        else {
+            $connected = false;
+        }
+        return $connected;
+
+    }
 }

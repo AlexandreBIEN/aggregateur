@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../models/user-model.php';
+require_once __DIR__ . '/../models/User-model.php';
 session_start();
 
 // Si la variable $_GET['confirm'] = true alors on enregistre l'utilisateur dans la base de donnée
@@ -31,11 +31,11 @@ else {
     }
     // Sinon on renvoi vers la page d'inscription
     else {
-        // On vide toutes les variables de SESSION temporaire
-        $_SESSION['pending_login'] = "";
-        $_SESSION['pending_password'] = "";
-        $_SESSION['pending_email'] = "";
-        $_SESSION['pending_interests'] = "";
+        // On détruit toutes les variables de SESSION temporaire
+        unset($_SESSION['pending_login']);
+        unset($_SESSION['pending_password']);
+        unset($_SESSION['pending_email']);
+        unset($_SESSION['pending_interests']);
         $_SESSION['confirmedUser'] = false;
 
         header('Location: /inscription');

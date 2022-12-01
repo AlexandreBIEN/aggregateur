@@ -1,7 +1,7 @@
 <?php 
 $title = 'Connexion';
 require_once './inc/header.php';
-session_start();
+// session_start();
 ?>
 
 <main class="container container-width">

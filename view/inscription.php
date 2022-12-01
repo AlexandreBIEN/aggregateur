@@ -27,7 +27,8 @@ require_once './inc/header.php';
             <input required type="text" class="form-control" id="interests" name="interests" placeholder="ex : Rugby,Basket">
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-secondary">Créer le compte</button>
+            <button type="submit" class="btn btn-secondary">Créer le compte</button><br>
+            <a href="/connexion">Retour</a>
         </div>
     </form>
 </main>

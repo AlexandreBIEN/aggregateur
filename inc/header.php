@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(($_SERVER['REQUEST_URI'] != '/connexion') && $_SERVER['REQUEST_URI'] != '/inscription'){
+    if(!isset($_SESSION['login'])){
+        header('Location: /connexion');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,8 +27,8 @@
         <div class="container d-flex justify-content-end">
             <ul>
                 <li><a href="/accueil">Accueil</a></li>
-                <li><a href="/modification">Profil</a></li>
-                <li><a href="./controllers/connect-user-controller.php">Se déconnecter</a></li>
+                <li><a href="/">Profil</a></li>
+                <li><a href="./controllers/deconnexion-controller.php">Se déconnecter</a></li>
             </ul>
         </div>
     </nav>
