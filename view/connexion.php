@@ -25,7 +25,7 @@ require_once './inc/header.php';
             <?php endif; ?>
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-secondary">Connexion</button><br>
+            <button type="submit" class="btn btn-secondary">Connexion</button><br><br>
             <a href="/inscription">S'inscrire</a>
         </div>
     </form>

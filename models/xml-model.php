@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/db.php';
+require_once './models/db.php';
 
 class Xml {
 
@@ -8,9 +8,9 @@ class Xml {
      * Fonction qui va chercher les infos d'un flux RSS dans la base de donnée
      *
      * @param string $user_interest
-     * @return boolean
+     * @return self
      */
-    public function get_rss_info(string $user_interest):bool
+    public function get_rss_info(string $user_interest)
     {
         $db = db_connect();
 
@@ -26,10 +26,11 @@ class Xml {
             `name` = :user_interest
         EOD;
 
-        $rssInfo = $db->prepare($sql);
-        $rssInfo->bindValue(':user_interest', $user_interest);
-        $rssInfo->execute();
-        return true;
+        $rssStmt = $db->prepare($sql);
+        $rssStmt->bindValue(':user_interest', $user_interest);
+        $rssStmt->execute();
+        $rssInfos = $rssStmt->fetchAll(PDO::FETCH_ASSOC);
+        return $rssInfos;
     }
 
 
@@ -37,15 +38,15 @@ class Xml {
      * Fonction qui récupère et les données du fichier xml en objet
      *
      * @param string $user_interest
-     * @return void
+     * @return self
      */
     public function get_data_from_xml(string $user_interest)
     {
         // Url du Flux RSS
-        $url = $this->get_rss_info($user_interest)[0]['interests'];
-        echo $url;
+        $url = $this->get_rss_info($user_interest)[0]['link'];
         // On interprète le fichier xml en objet
         $xml = simpleXML_load_file($url);
         return $xml;
     }
+    
 }
