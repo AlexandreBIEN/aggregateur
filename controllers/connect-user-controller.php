@@ -20,7 +20,7 @@ if($_GET != null) {
 
         $_SESSION['login'] = $user->getLogin();
 
-        header('Location: /accueil');
+        header('Location: ./accueil-controller.php');
     }
     // Sinon on renvoi sur la page de connexion
     else{

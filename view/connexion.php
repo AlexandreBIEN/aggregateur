@@ -26,7 +26,7 @@ require_once './inc/header.php';
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-secondary">Connexion</button><br><br>
-            <a href="/inscription">S'inscrire</a>
+            <a href="../controllers/interest-list-controller.php">S'inscrire</a>
         </div>
     </form>
 </main>

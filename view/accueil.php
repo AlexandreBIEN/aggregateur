@@ -2,15 +2,15 @@
 $title = 'Accueil';
 require_once './inc/header.php';
 // Url du Flux RSS
-$url = 'https://www.lemonde.fr/sport/rss_full.xml';
+$urlXmlo = $_SESSION['xmlo'];
 // On interprète le fichier xml en objet
-$xml = simpleXML_load_file($url);
+$xmlo = simpleXML_load_file($urlXmlo);
 ?>
 
 <div class="container d-flex">
     <div class="row">
     <!-- Liste des postes -->
-    <?php foreach ($xml->channel->item as $key => $value) : ?>
+    <?php foreach ($xmlo->channel->item as $key => $value) : ?>
         <div class="col">
             <div class="card mb-4 p-4">
                 <!-- Image du poste -->

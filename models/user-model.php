@@ -14,6 +14,7 @@ class UserModel {
      */
     public function register_user(string $user_login, string $user_password, string $user_email, string $user_interests):bool
     {
+        // Fonction qui vérif email si existe
         $db = db_connect();
 
         $sql = <<<EOD

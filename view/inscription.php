@@ -23,8 +23,12 @@ require_once './inc/header.php';
             <input required type="email" class="form-control" id="email" name="email" placeholder="ex : exemple@gmail.com">
         </div>
         <div class="form-group">
-            <label for="interests">Intérêt(s) :</label>
-            <input required type="text" class="form-control" id="interests" name="interests" placeholder="ex : Rugby">
+            <label for="interests">Choisissez votre intérêt :</label>
+            <select required class="form-control" id="interests" name="interests" placeholder="ex : Rugby">
+                <?php foreach ($_SESSION['interestsList'] as $key => $value) : ?>
+                    <option value="<?= $value['name']?>"><?= $value['name']?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-secondary">Créer le compte</button><br><br>

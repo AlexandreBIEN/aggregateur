@@ -1,5 +1,5 @@
 <?php
-require_once './models/db.php';
+require_once __DIR__ . '/db.php';
 
 class Xml {
 
@@ -46,6 +46,7 @@ class Xml {
         $url = $this->get_rss_info($user_interest)[0]['link'];
         // On interprète le fichier xml en objet
         $xml = simpleXML_load_file($url);
+        // var_dump($xml);
         return $xml;
     }
     
