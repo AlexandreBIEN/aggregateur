@@ -25,7 +25,7 @@ if(isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != ''){
             require_once __DIR__ . '/view/modification.php';
             break;
         case '/demande-email':
-            require_once __DIR__ . '/view/profile.php';
+            require_once __DIR__ . '/view/demande-email.php';
             break;
         case '/profil':
             require_once __DIR__ . '/view/profil.php';
