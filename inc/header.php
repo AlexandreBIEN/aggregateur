@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(($_SERVER['REQUEST_URI'] != '/connexion') && $_SERVER['REQUEST_URI'] != '/inscription'){
+if(($_SERVER['REQUEST_URI'] != '/connexion') && $_SERVER['REQUEST_URI'] != '/inscription' && $_SERVER['REQUEST_URI'] != '/inscription' && $_SERVER['REQUEST_URI'] != '/modification'){
     if(!isset($_SESSION['login'])){
         header('Location: /connexion');
     }
