@@ -115,21 +115,4 @@ class User {
     {
         return $this->email;
     }
-
-    /**
-     * Vérification si l'utilisateur est connecté
-     *
-     * @return boolean
-     */
-    public function isUserConnected():bool
-    {
-        if($this->getLogin() == null){
-            $connected = false;
-        }
-        else {
-            $connected = true;
-        }
-        return $connected;
-
-    }
 }

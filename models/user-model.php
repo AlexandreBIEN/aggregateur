@@ -75,7 +75,7 @@ class UserModel {
 
 
     /**
-     * Fonction qui récupère les informations de l'utilisateur ayant le même identifiant et mot de passe que renseigné en paramètre
+     * Fonction qui vérifie les informations de l'utilisateur ayant le même identifiant et mot de passe que renseigné en paramètre
      *
      * @param string $user_login
      * @param string $user_password
@@ -110,7 +110,7 @@ class UserModel {
     }
 
     /**
-     * Fonction qui récupère les informations de l'utilisateur ayant le même identifiant et mot de passe que renseigné en paramètre
+     * Fonction qui récupère les informations de l'utilisateur ayant le même identifiant que renseigné en paramètre
      *
      * @param string $user_login
      * @return void
