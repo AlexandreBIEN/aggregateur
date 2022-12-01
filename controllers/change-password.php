@@ -5,8 +5,8 @@ session_start();
 
 if($_GET != null) {
     $userModel = new UserModel();
-    
-    $userModel->change_user_password($_GET['password'], $_SESSION['userLoginTamp']);
+    $userModel->change_user_password($_GET['password'], $_SESSION['userEmailTamp']);
+    unset($_SESSION['userEmailTamp']);
     header('Location: /connexion');
 }
 else {

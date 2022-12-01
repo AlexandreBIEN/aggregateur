@@ -147,7 +147,7 @@ class UserModel {
      * @param string $user_login
      * @return boolean
      */
-    public function change_user_password(string $user_new_password, string $user_login):bool
+    public function change_user_password(string $user_new_password, string $user_email):bool
     {
         $db = db_connect();
 
@@ -157,12 +157,12 @@ class UserModel {
         SET 
             `password` = :user_new_password 
         WHERE 
-            `users`.`login` = :user_login;
+            `users`.`email` = :user_email;
         EOD;
 
         $changePwd = $db->prepare($sql);
         $changePwd->bindValue(':user_new_password', $user_new_password);
-        $changePwd->bindValue(':user_login', $user_login);
+        $changePwd->bindValue(':user_email', $user_email);
 
         $changePwd->execute();
         return true;

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(($_SERVER['REQUEST_URI'] != '/connexion') && $_SERVER['REQUEST_URI'] != '/inscription' && $_SERVER['REQUEST_URI'] != '/modification' && $_SERVER['REQUEST_URI'] != '/verification-inscription' && $_SERVER['REQUEST_URI'] != '/verification-modification'){
+if(($_SERVER['REQUEST_URI'] != '/connexion') && $_SERVER['REQUEST_URI'] != '/inscription' && $_SERVER['REQUEST_URI'] != '/modification' && $_SERVER['REQUEST_URI'] != '/verification-inscription' && $_SERVER['REQUEST_URI'] != '/verification-modification' && $_SERVER['REQUEST_URI'] != '/demande-email'){
     if(!isset($_SESSION['login'])){
         header('Location: /connexion');
     }
