@@ -27,7 +27,7 @@ if(($_SERVER['REQUEST_URI'] != '/connexion') && $_SERVER['REQUEST_URI'] != '/ins
         <div class="container d-flex justify-content-end">
             <ul>
                 <li><a href="/accueil">Accueil</a></li>
-                <li><a href="/">Profil</a></li>
+                <li><a href="./controllers/interest-change-list-controller.php">Profil</a></li>
                 <li><a href="./controllers/deconnexion-controller.php">Se déconnecter</a></li>
             </ul>
         </div>

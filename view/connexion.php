@@ -21,12 +21,12 @@ require_once './inc/header.php';
             <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
             <?php if(isset($_SESSION['errorConnection']) && $_SESSION['errorConnection'] == true) : ?>
                 <span class="text-danger">Votre identifiant ou votre mot de passe est erroné, veuillez réessayer.</span>
-                <a href="/demande-email">Mot de passe oublié</a>
             <?php endif; ?>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-secondary">Connexion</button><br><br>
-            <a href="../controllers/interest-list-controller.php">S'inscrire</a>
+            <a href="../controllers/interest-list-controller.php">S'inscrire</a><br><br>
+            <a href="/demande-email">Mot de passe oublié</a>
         </div>
     </form>
 </main>

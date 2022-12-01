@@ -144,7 +144,7 @@ class UserModel {
      * Fonction qui change le mot de passe de l'utilisateur par le nouveau
      *
      * @param string $user_new_password
-     * @param string $user_login
+     * @param string $user_email
      * @return boolean
      */
     public function change_user_password(string $user_new_password, string $user_email):bool
